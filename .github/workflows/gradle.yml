@@ -10,8 +10,6 @@ name: Java CI with Gradle
 on:
   push:
     branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
 
 permissions:
   contents: read
@@ -56,5 +54,5 @@ jobs:
       run: |
         aws s3 cp \
         --region ap-northeast-2 \
-        --acl private \ 
+        --acl public \
         ./gitaction1000.zip s3://gitaction1000/
