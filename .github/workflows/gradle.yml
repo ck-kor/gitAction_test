@@ -55,6 +55,6 @@ jobs:
         AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
       run: |
         aws s3 cp \
-        --region ap-northeast-2 \
-        --acl private \ 
+        aws --region ap-northeast-2 \
+        aws --acl private \ 
         ./gitaction1000.zip s3://gitaction1000/
